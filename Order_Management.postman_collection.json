@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "b59ae6aa-641d-495f-9d26-b9c92043115e",
+		"name": "Order Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23551395"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"firstName\": \"Adam\",\r\n    \"lastName\": \"Saleem\",\r\n    \"bortAt\": \"2001-07-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/customers"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/customers"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/doctor/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Adam\",\r\n    \"lastName\": \"Saleem\",\r\n    \"bortAt\": \"2001-07-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/customers/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/customers/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\",\r\n    \"ordered_at\":\"2017-05-14T10:34\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/patient"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/orders/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Adam Saleem 2\",\r\n    \"birthDate\": \"2001-07-02\",\r\n    \"gender\": \"male\",\r\n    \"phoneNumber\": \"0595498633\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/orders/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/patient/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"slug\": \"coca-cola\",\r\n  \"name\": \"Coca Cola\",\r\n  \"reference\": \"Al-Wataniya\",\r\n  \"price\": 3,\r\n  \"vat\": 0.5,\r\n  \"stockable\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/products"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/products"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/products/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"slug\": \"coca-cola\",\r\n  \"name\": \"Coca Cola\",\r\n  \"reference\": \"new-company\",\r\n  \"price\": 3,\r\n  \"vat\": 0.2,\r\n  \"stockable\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/products/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/products/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "Create Stocks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"product_id\": 1,\r\n  \"quantity\": 100,\r\n  \"updated_at\": \"2023-07-04T18:15:51.808Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/stocks"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Stocks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/stocks"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stocks By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/stocks/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Stocks",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"product_id\": 1,\r\n  \"quantity\": 100,\r\n  \"updated_at\": \"2023-07-04T18:15:51.808Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/stocks/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Stocks",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/stocks/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductOrder",
+			"item": [
+				{
+					"name": "Create ProductOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"quantity\": 10,\r\n  \"price\": 300,\r\n  \"vat\": 50,\r\n  \"product_id\":\"1\",\r\n  \"order_id\": \"1\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/productOrders"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All ProductOrder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/productOrders"
+					},
+					"response": []
+				},
+				{
+					"name": "Get ProductOrder By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/productOrders/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update ProductOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quantity\": 1000,\r\n  \"price\": 3000,\r\n  \"vat\": 500,\r\n  \"product_id\":\"1\",\r\n  \"order_id\": \"1\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/productOrders/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ProductOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/productOrders/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
